@@ -139,7 +139,7 @@ int main(int argc, char** argv) {
         free(globalWords);
     }
     else {
-        // Procesele non-zero trimit
+       
         MPI_Send(&localCount, 1, MPI_INT, 0, 0, MPI_COMM_WORLD);
         MPI_Send(localWords, localCount * sizeof(WordFreq), MPI_BYTE, 0, 0, MPI_COMM_WORLD);
     }
